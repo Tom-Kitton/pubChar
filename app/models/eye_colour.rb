@@ -1,0 +1,2 @@
+class EyeColour < ApplicationRecord
+end

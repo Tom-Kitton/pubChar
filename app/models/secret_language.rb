@@ -1,0 +1,2 @@
+class SecretLanguage < ApplicationRecord
+end
