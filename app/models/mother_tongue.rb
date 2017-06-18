@@ -1,0 +1,2 @@
+class MotherTongue < ApplicationRecord
+end
