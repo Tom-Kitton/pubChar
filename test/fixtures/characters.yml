@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstname: MyText
+  lastname: MyText
+  occupation: MyText
+  mother_tongue: MyText
+  nationality: MyText
+  ethnicity: MyText
+  age: 1
+  gender: MyText
+  obsession: MyText
+  order_alignment: MyText
+  moral_alignment: MyText
+  secret_language: MyText
+  eye_colour: MyText
+  skin_base_tone: MyText
+  favourite_food: MyText
+  favourite_drink: MyText
+  star_sign: MyText
+  ailment: MyText
+  character: MyText
+
+two:
+  firstname: MyText
+  lastname: MyText
+  occupation: MyText
+  mother_tongue: MyText
+  nationality: MyText
+  ethnicity: MyText
+  age: 1
+  gender: MyText
+  obsession: MyText
+  order_alignment: MyText
+  moral_alignment: MyText
+  secret_language: MyText
+  eye_colour: MyText
+  skin_base_tone: MyText
+  favourite_food: MyText
+  favourite_drink: MyText
+  star_sign: MyText
+  ailment: MyText
+  character: MyText

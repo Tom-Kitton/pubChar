@@ -1,0 +1,2 @@
+class OrderAlignment < ApplicationRecord
+end

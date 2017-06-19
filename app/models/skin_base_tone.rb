@@ -1,0 +1,2 @@
+class SkinBaseTone < ApplicationRecord
+end

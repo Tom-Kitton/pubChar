@@ -1,0 +1,2 @@
+class MoralAlignment < ApplicationRecord
+end
