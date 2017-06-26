@@ -25,6 +25,7 @@ class CharactersController < ApplicationController
   # POST /characters.json
   def create
     @character = Character.new(character_params)
+    populate_character
 
     respond_to do |format|
       if @character.save
@@ -59,6 +60,27 @@ class CharactersController < ApplicationController
       format.html { redirect_to characters_url, notice: 'Character was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def populate_character
+    @character.age.nil? ? @character.age = rand(15..100) : @character.age
+    @character.ethnicity.empty? ? @character.ethnicity = Ethnicity.all.map(&:content).sample : @character.ethnicity
+    @character.nationality.empty? ? @character.nationality = Nationality.all.map(&:content).sample : @character.nationality
+    @character.mother_tongue.empty? ? @character.mother_tongue = MotherTongue.all.map(&:content).sample : @character.mother_tongue
+    @character.occupation.empty? ? @character.occupation = Occupation.all.map(&:content).sample : @character.occupation
+    @character.lastname.empty? ? @character.lastname = Lastname.all.map(&:content).sample : @character.lastname
+    @character.firstname.empty? ? @character.firstname = Firstname.all.map(&:content).sample : @character.firstname
+    @character.gender.empty? ? @character.gender = Gender.all.map(&:content).sample : @character.gender
+    @character.obsession.empty? ? @character.obsession = Obsession.all.map(&:content).sample : @character.obsession
+    @character.order_alignment.empty? ? @character.order_alignment = OrderAlignment.all.map(&:content).sample : @character.order_alignment
+    @character.secret_language.empty? ? @character.secret_language = SecretLanguage.all.map(&:content).sample : @character.secret_language
+    @character.moral_alignment.empty? ? @character.moral_alignment = MoralAlignment.all.map(&:content).sample : @character.moral_alignment
+    @character.eye_colour.empty? ? @character.eye_colour = EyeColour.all.map(&:content).sample : @character.eye_colour
+    @character.skin_base_tone.empty? ? @character.skin_base_tone = SkinBaseTone.all.map(&:content).sample : @character.skin_base_tone
+    @character.favourite_food.empty? ? @character.favourite_food = FavouriteFood.all.map(&:content).sample : @character.favourite_food
+    @character.favourite_drink.empty? ? @character.favourite_drink = FavouriteDrink.all.map(&:content).sample : @character.favourite_drink
+    @character.ailment.empty? ? @character.ailment = Ailment.all.map(&:content).sample : @character.ailment
+    @character.star_sign.empty? ? @character.star_sign = StarSign.all.map(&:content).sample : @character.star_sign
   end
 
   private
