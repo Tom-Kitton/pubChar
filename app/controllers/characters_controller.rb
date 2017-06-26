@@ -63,7 +63,7 @@ class CharactersController < ApplicationController
   end
 
   def populate_character
-    @character.age.nil? ? @character.age = rand(15..100) : @character.age
+    @character.age.nil? ? @character.age = generate_age : @character.age
     @character.ethnicity.empty? ? @character.ethnicity = Ethnicity.all.map(&:content).sample : @character.ethnicity
     @character.nationality.empty? ? @character.nationality = Nationality.all.map(&:content).sample : @character.nationality
     @character.mother_tongue.empty? ? @character.mother_tongue = MotherTongue.all.map(&:content).sample : @character.mother_tongue
@@ -81,6 +81,10 @@ class CharactersController < ApplicationController
     @character.favourite_drink.empty? ? @character.favourite_drink = FavouriteDrink.all.map(&:content).sample : @character.favourite_drink
     @character.ailment.empty? ? @character.ailment = Ailment.all.map(&:content).sample : @character.ailment
     @character.star_sign.empty? ? @character.star_sign = StarSign.all.map(&:content).sample : @character.star_sign
+  end
+
+  def generate_age
+    rand(15..100)
   end
 
   private
