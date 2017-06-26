@@ -1,0 +1,22 @@
+<%= form_with(model: moral_alignment, local: true) do |form| %>
+  <% if moral_alignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(moral_alignment.errors.count, "error") %> prohibited this moral_alignment from being saved:</h2>
+
+      <ul>
+      <% moral_alignment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :moral_alignment_content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

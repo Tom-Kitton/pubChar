@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Obsessions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @obsessions.each do |obsession| %>
+      <tr>
+        <td><%= obsession.content %></td>
+        <td><%= link_to 'Show', obsession %></td>
+        <td><%= link_to 'Edit', edit_obsession_path(obsession) %></td>
+        <td><%= link_to 'Destroy', obsession, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Obsession', new_obsession_path %>

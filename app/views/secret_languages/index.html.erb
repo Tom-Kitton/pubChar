@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Secret Languages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @secret_languages.each do |secret_language| %>
+      <tr>
+        <td><%= secret_language.content %></td>
+        <td><%= link_to 'Show', secret_language %></td>
+        <td><%= link_to 'Edit', edit_secret_language_path(secret_language) %></td>
+        <td><%= link_to 'Destroy', secret_language, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Secret Language', new_secret_language_path %>

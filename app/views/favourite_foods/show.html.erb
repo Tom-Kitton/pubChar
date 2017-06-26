@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @favourite_food.content %>
+</p>
+
+<%= link_to 'Edit', edit_favourite_food_path(@favourite_food) %> |
+<%= link_to 'Back', favourite_foods_path %>

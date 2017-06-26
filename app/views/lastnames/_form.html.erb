@@ -1,0 +1,22 @@
+<%= form_with(model: lastname, local: true) do |form| %>
+  <% if lastname.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lastname.errors.count, "error") %> prohibited this lastname from being saved:</h2>
+
+      <ul>
+      <% lastname.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :lastname_content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

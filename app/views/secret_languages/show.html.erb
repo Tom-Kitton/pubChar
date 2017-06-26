@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @secret_language.content %>
+</p>
+
+<%= link_to 'Edit', edit_secret_language_path(@secret_language) %> |
+<%= link_to 'Back', secret_languages_path %>
