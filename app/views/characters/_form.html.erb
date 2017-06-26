@@ -1,0 +1,107 @@
+<%= form_with(model: character, local: true) do |form| %>
+  <% if character.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(character.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+      <% character.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age, id: :character_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ethnicity %>
+    <%= form.text_area :ethnicity, id: :character_ethnicity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nationality %>
+    <%= form.text_area :nationality, id: :character_nationality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mother_tongue %>
+    <%= form.text_area :mother_tongue, id: :character_mother_tongue %>
+  </div>
+
+  <div class="field">
+    <%= form.label :occupation %>
+    <%= form.text_area :occupation, id: :character_occupation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastname %>
+    <%= form.text_area :lastname, id: :character_lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :firstname %>
+    <%= form.text_area :firstname, id: :character_firstname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_area :gender, id: :character_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :obsession %>
+    <%= form.text_area :obsession, id: :character_obsession %>
+  </div>
+
+  <div class="field">
+    <%= form.label :order_alignment %>
+    <%= form.text_area :order_alignment, id: :character_order_alignment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :secret_language %>
+    <%= form.text_area :secret_language, id: :character_secret_language %>
+  </div>
+
+  <div class="field">
+    <%= form.label :moral_alignment %>
+    <%= form.text_area :moral_alignment, id: :character_moral_alignment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eye_colour %>
+    <%= form.text_area :eye_colour, id: :character_eye_colour %>
+  </div>
+
+  <div class="field">
+    <%= form.label :skin_base_tone %>
+    <%= form.text_area :skin_base_tone, id: :character_skin_base_tone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :favourite_food %>
+    <%= form.text_area :favourite_food, id: :character_favourite_food %>
+  </div>
+
+  <div class="field">
+    <%= form.label :favourite_drink %>
+    <%= form.text_area :favourite_drink, id: :character_favourite_drink %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ailment %>
+    <%= form.text_area :ailment, id: :character_ailment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :star_sign %>
+    <%= form.text_area :star_sign, id: :character_star_sign %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
