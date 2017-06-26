@@ -17,7 +17,7 @@
 - `git commit -m "<description>"`
 - `git push`
 - goto gitub repo (i.e. here)
-- click 'Create New Pull Request'
+- click 'New Pull Request'
 - choose your branch against Master
 - click 'Create Pull Request'
 - Greg to review
