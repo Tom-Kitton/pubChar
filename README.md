@@ -21,3 +21,9 @@
 - choose your branch against Master
 - click 'Create Pull Request'
 - Greg to review
+
+## where stuff is
+
+- character generation is found in `controllers/characters_controller.rb`
+- various views are found in `views/<model>`
+- stylesheets are found in `assets/stylesheets/<model>`
