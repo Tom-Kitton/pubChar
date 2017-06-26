@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## running locally
 
-Things you may want to cover:
+- navigate to local project folder
+- `rails s`
+- in browser, navigate to `localhost:3000/<whatever_model>`
 
-* Ruby version
+## working on a feature
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- navigate to local project folder
+- `git checkout master`
+- `git pull`
+- `git checkout -b <feature/blah>`
+- fuck around
+- `git add <filename>` or `git add .`
+- `git commit -m "<description>"`
+- `git push`
+- goto gitub repo (i.e. here)
+- click 'Create New Pull Request'
+- choose your branch against Master
+- click 'Create Pull Request'
+- Greg to review
