@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Favourite Foods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favourite_foods.each do |favourite_food| %>
+      <tr>
+        <td><%= favourite_food.content %></td>
+        <td><%= link_to 'Show', favourite_food %></td>
+        <td><%= link_to 'Edit', edit_favourite_food_path(favourite_food) %></td>
+        <td><%= link_to 'Destroy', favourite_food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Favourite Food', new_favourite_food_path %>

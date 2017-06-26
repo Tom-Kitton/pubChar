@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Star Signs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @star_signs.each do |star_sign| %>
+      <tr>
+        <td><%= star_sign.content %></td>
+        <td><%= link_to 'Show', star_sign %></td>
+        <td><%= link_to 'Edit', edit_star_sign_path(star_sign) %></td>
+        <td><%= link_to 'Destroy', star_sign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Star Sign', new_star_sign_path %>

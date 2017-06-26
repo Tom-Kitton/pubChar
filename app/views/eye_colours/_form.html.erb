@@ -1,0 +1,22 @@
+<%= form_with(model: eye_colour, local: true) do |form| %>
+  <% if eye_colour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(eye_colour.errors.count, "error") %> prohibited this eye_colour from being saved:</h2>
+
+      <ul>
+      <% eye_colour.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :eye_colour_content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

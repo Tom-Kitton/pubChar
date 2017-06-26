@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Skin Base Tones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @skin_base_tones.each do |skin_base_tone| %>
+      <tr>
+        <td><%= skin_base_tone.content %></td>
+        <td><%= link_to 'Show', skin_base_tone %></td>
+        <td><%= link_to 'Edit', edit_skin_base_tone_path(skin_base_tone) %></td>
+        <td><%= link_to 'Destroy', skin_base_tone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Skin Base Tone', new_skin_base_tone_path %>
