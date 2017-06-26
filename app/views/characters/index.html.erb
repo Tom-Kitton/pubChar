@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Characters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Age</th>
+      <th>Ethnicity</th>
+      <th>Nationality</th>
+      <th>Mother tongue</th>
+      <th>Occupation</th>
+      <th>Lastname</th>
+      <th>Firstname</th>
+      <th>Gender</th>
+      <th>Obsession</th>
+      <th>Order alignment</th>
+      <th>Secret language</th>
+      <th>Moral alignment</th>
+      <th>Eye colour</th>
+      <th>Skin base tone</th>
+      <th>Favourite food</th>
+      <th>Favourite drink</th>
+      <th>Ailment</th>
+      <th>Star sign</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= character.age %></td>
+        <td><%= character.ethnicity %></td>
+        <td><%= character.nationality %></td>
+        <td><%= character.mother_tongue %></td>
+        <td><%= character.occupation %></td>
+        <td><%= character.lastname %></td>
+        <td><%= character.firstname %></td>
+        <td><%= character.gender %></td>
+        <td><%= character.obsession %></td>
+        <td><%= character.order_alignment %></td>
+        <td><%= character.secret_language %></td>
+        <td><%= character.moral_alignment %></td>
+        <td><%= character.eye_colour %></td>
+        <td><%= character.skin_base_tone %></td>
+        <td><%= character.favourite_food %></td>
+        <td><%= character.favourite_drink %></td>
+        <td><%= character.ailment %></td>
+        <td><%= character.star_sign %></td>
+        <td><%= link_to 'Show', character %></td>
+        <td><%= link_to 'Edit', edit_character_path(character) %></td>
+        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Character', new_character_path %>
