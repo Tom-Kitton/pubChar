@@ -63,14 +63,14 @@ class CharactersController < ApplicationController
   end
 
   def populate_character
-    @character.age.nil? ? @character.age = generate_age : @character.age
-    @character.ethnicity.empty? ? @character.ethnicity = Ethnicity.all.map(&:content).sample : @character.ethnicity
-    @character.nationality.empty? ? @character.nationality = Nationality.all.map(&:content).sample : @character.nationality
-    @character.mother_tongue.empty? ? @character.mother_tongue = MotherTongue.all.map(&:content).sample : @character.mother_tongue
-    @character.occupation.empty? ? @character.occupation = Occupation.all.map(&:content).sample : @character.occupation
     @character.lastname.empty? ? @character.lastname = Lastname.all.map(&:content).sample : @character.lastname
     @character.firstname.empty? ? @character.firstname = Firstname.all.map(&:content).sample : @character.firstname
     @character.gender.empty? ? @character.gender = Gender.all.map(&:content).sample : @character.gender
+    @character.age.nil? ? @character.age = generate_age : @character.age
+    @character.occupation.empty? ? @character.occupation = Occupation.all.map(&:content).sample : @character.occupation
+    @character.ethnicity.empty? ? @character.ethnicity = Ethnicity.all.map(&:content).sample : @character.ethnicity
+    @character.nationality.empty? ? @character.nationality = Nationality.all.map(&:content).sample : @character.nationality
+    @character.mother_tongue.empty? ? @character.mother_tongue = MotherTongue.all.map(&:content).sample : @character.mother_tongue
     @character.obsession.empty? ? @character.obsession = Obsession.all.map(&:content).sample : @character.obsession
     @character.order_alignment.empty? ? @character.order_alignment = OrderAlignment.all.map(&:content).sample : @character.order_alignment
     @character.secret_language.empty? ? @character.secret_language = SecretLanguage.all.map(&:content).sample : @character.secret_language
